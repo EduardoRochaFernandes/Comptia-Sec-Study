@@ -75,7 +75,7 @@
 - **EDR / XDR** — deteção/resposta por **behavior + ML** num endpoint (EDR) ou correlacionando vários (**X**DR); dashboard para ransomware.
 - **UEBA (User and Entity Behavior Analytics)** — ML sobre o comportamento do utilizador para detetar anomalias.
 - **SNMP (Simple Network Management Protocol)** : Trata-se de um protocolo que monitoriza diferentes dispositivos. Para escolher um vai-se ao “menu” MIB, depois escolhe-se o dispositivo via uma espécie de “barcode” OID. No porto 161, o dispositivo informa o router das suas métricas nos últimos minutos de x em x tempo. Já no porto 162, existem regras configuradas para que, se algo anormal ocorrer, o dispositivo ignore esse período e avise logo.
-- **Netflow**: Ao contrário de uma host-based firewall que monitoriza e bloqueia em tempo real diferentes alertas num OS e num dispositivo em específico, o netflow apenas alerta sobre dados monitorizados da rede que corre num router/switch (ou seja na rede inteira).
+- **Netflow**: Ao contrário do IDS que tem como objetivo garantir segurança numa rede inteira ao alertar ataques, o netflow apenas foca no desempenho e bandwidth de uma rede inteira ao registar os metadados dos packets a serem recebidos.
   
 ## 4.6 — Identity & Access Management (IAM)
 IAM = dar as permissões certas às pessoas certas, do **onboarding ao offboarding**. **Interoperability** = boa junção destes processos.
