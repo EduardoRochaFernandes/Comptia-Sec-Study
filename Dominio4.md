@@ -41,7 +41,7 @@
 ### Identification
 - **Vulnerability scan** — **authenticated scans** dão a **maior visibilidade** (> unauthenticated/port scan). Ferramentas: **Nessus/OpenVAS**.
 - **Application security:** **Static analysis**, **Dynamic analysis**, **Package monitoring** (dependências).
-- **Threat feed:** **OSINT** (público), **Proprietary/third-party** (pago/vetado), **Information-sharing organization** (ex.: ISAC/CTA), **Dark web** (via TOR).
+- **Threat feed:** **OSINT** (público),IMPORTANTE: PODE SER PROPRIETARY SE FOR PAGO: **Proprietary/third-party** (pago/vetado), **Information-sharing organization** (ex.: ISAC/CTA), **Dark web** (via TOR).
 - **Penetration testing** — simula e **explora**; começa por **exploration/exploitation** → **lateral movement** → **persistence** (backdoors) → **proxy attack**. Segue **rules of engagement**.
 - **Responsible disclosure / Bug bounty** — reportar privadamente seguindo **rules of engagement** ; **bug bounty** paga por vulnerabilidades reportadas.
 - **System/process audit.**
