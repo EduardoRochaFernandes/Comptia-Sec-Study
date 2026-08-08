@@ -76,8 +76,8 @@ Ter o máximo de **security zones** para segmentar dispositivos/redes com nívei
   - **Session persistence / Sticky** (mesmo cliente -> mesmo servidor). *Não cobre **risk transference**.*
 - **Clustering** — vários servidores respondem **como se fossem o mesmo dispositivo** (distinto de load balancing).
 - **IPS/IDS monitoring:** **Inline / Active NIPS** (filtra, deteta e **bloqueia** antes de chegar), **Passive / Out-of-band** (recebe cópia do tráfego, deteta e alerta, como um IDS). Um **IDS** é sempre **passivo**. Deteção por **signatures**, **heuristics** e **anomalies** (esta última apanha comportamentos de APT após baseline).
-- **Network / Physical tap** — hardware inserido entre switch e router que copia o sinal; se falhar, a ligação continua.
-- **Port mirror / SPAN (Switch Port Analyzer)** — funcionalidade do switch que copia tráfego para monitorização passiva (é **passive + monitor**).
+- **Network / Physical tap** — Passivo. hardware inserido entre switch e router que copia o sinal; se falhar, a ligação continua.
+- **Port mirror / SPAN (Switch Port Analyzer)** — Semi-Passivo (no exame, se network tap e port mirror aparecerem, o tap é que é o passivo). Funcionalidade do switch que copia tráfego para monitorização passiva.
 - **Sensors** — recolhem dados (incl. **environmental sensors** para o estado do datacenter).
 - **Jump server** — aceder remotamente via **SSH/RDP** a uma rede interna protegida (host intermédio).
 - **Proxy server** — intermediário cliente<->internet/servidores. Tipos: **Explicit** (configurado no OS), **Transparent** (invisível, interceta), **Open** (gerido por terceiros), **Forward** (interno -> internet), **Reverse** (internet -> interno). *(Vários clientes com o mesmo IP público -> proxy.)*
