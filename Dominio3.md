@@ -7,7 +7,7 @@
 ### Cloud Infrastructure
 Modelo muito usado pela capacidade de armazenamento e facilidade de acesso. Grandes tipos:
 1. **Hybrid cloud** — >1 provider em simultâneo a comunicar. *Concern principal (Sybex): aumento de complexidade + desafios de jurisdição/data sovereignty.*
-2. **IaC (Infrastructure as Code)** — a infraestrutura é criada via **código** (não manualmente na AWS/Azure), permitindo automação e deploy/replace de VMs em escala. *Boas práticas: **version control** e **artifact signing** (evitar adulteração); remediar vuln = atualizar a imagem base e reinstanciar.*
+2. **IaC (Infrastructure as Code)** — a infraestrutura é criada via **código** (não manualmente na AWS/Azure), permitindo automação e deploy/replace de VMs em escala. **IMPORTANTE**: *Boas práticas: **version control** e **artifact signing** (evitar adulteração); remediar vuln = atualizar a imagem base e reinstanciar.*
 3. **Serverless** — pagas só pelo tempo de execução; **não precisa de administrador**. Não é ideal para apps complexas; num DDoS de exaustão de recursos, a preocupação-chave é o **custo**.
 
 **Provider** — indivíduo/empresa que fornece recursos para a cloud. **Responsibility matrix** (quem gere o quê):
@@ -85,6 +85,7 @@ Ter o máximo de **security zones** para segmentar dispositivos/redes com nívei
 ### Port security & NAC
 - **Port security** — filtra por **MAC address** (que máquinas podem ligar-se a um porto Ethernet).
 - **802.1X** (Port-Based NAC) — antes de autenticar, o porto **só deixa passar tráfego EAP**. Fluxo: **Supplicant** tenta aceder -> **EAP** pede a identidade e envia ao **Auth Server** -> pede username/password -> supplicant fornece -> Auth Server verifica. Usado no **WPA3-Enterprise**; pode atribuir **VLAN por role**.
+- **NAC** - Serve para verificar se um dispositivo está legível ou não de entrar numa rede privada
 - **EAP** (Extensible Authentication Protocol) — linguagem entre supplicant e Auth Server: **EAP-TLS** (certificado nos **dois** lados), **PEAP** (certificado só do lado do **servidor**), **LEAP / EAP-MD5** (sem verificação forte).
 
 ### Firewall types
@@ -150,7 +151,7 @@ Ter o máximo de **security zones** para segmentar dispositivos/redes com nívei
 
 ### Testing (do menos ao mais disruptivo)
 - **Tabletop exercise** — discussão guiada de papéis e ações (**menos** disruptivo).
-- **Simulation** — simular um evento real (notificações, procedimentos, comunicações).
+- **Simulation** — simular um evento real (notificações, procedimentos, comunicações). NÃO deita abaixo o sistema pra ver se ele volta a funcionar. Isso seria Fail Over.
 - **Parallel processing** — processar em paralelo no sistema secundário sem causar outage (testa redundância sem "partir" nada).
 - **Fail over** — **forçar** a passagem para o sistema de backup para ver se assume (mais disruptivo).
 
