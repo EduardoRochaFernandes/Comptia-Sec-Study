@@ -99,7 +99,7 @@ Ter o máximo de **security zones** para segmentar dispositivos/redes com nívei
     - **AH (Authentication Header)** autentica o pacote mas **não encripta**;
     - **ESP (Encapsulating Security Payload)** autentica **e encripta** (mais usado);
     - **IKE (Internet Key Exchange)** protocolo que estabelece as **SAs (Security Associations)** que AH/ESP usam;
-    - **Tunnel mode** — encripta o **pacote inteiro** e adiciona novo IP header (site-to-site).
+    - **Tunnel mode** — encripta o **pacote inteiro** e adiciona novo IP header (site-to-site). Toma decisões baseado no IP.
     - **Transport mode** — encripta **apenas o payload** e **mantém o IP header original** visível (usado quando a política depende do porto/header). *Fornece confidentiality, authentication e integrity — não availability.*
 - **SSL/TLS VPN** — **Layer 7**; ligação remota fácil (browser-based), sem instalar cliente. Aplicar **TLS em todo o lado**. **Nunca usar SSL** (inseguro).
 - **IPSec vs TLS** — no IPSec o dispositivo fica **com o IP da empresa** (rede completa); no TLS acede-se só à app e navega-se remotamente.
