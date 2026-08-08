@@ -25,7 +25,7 @@
 ### Application security
 - **Input validation** — validar tipos/tamanhos/ranges no **servidor de confiança** (não confiar no cliente).
 - **Secure cookies** — atributo Secure = cookie só enviado por **HTTPS**.
-- **Static code analysis (SAST)** — analisa o **código-fonte** (revisão manual = static).
+- **Static code analysis (SAST)** — RISCO DE THEFT analisa o **código-fonte** (revisão manual = static).
 - **Dynamic analysis (DAST) / Fuzzing** — envia muitos inputs à **app em execução** para achar falhas/DoS.
 - **Code signing** — output = **hash assinado** do software com a **chave privada** do autor.
 - **Sandboxing** — testar malware/código num ambiente **isolado**.
@@ -85,7 +85,7 @@ IAM = dar as permissões certas às pessoas certas, do **onboarding ao offboardi
 - **Federation** — aceder a recursos via terceiro ("login via Facebook/Google"); usa **SAML token**.
 - **SSO (Single Sign-On)** — um login para vários sistemas.
   - **LDAP (Lightweight Directory Access Protocol)** — lê grandes diretórios (AD), baseado no X.500; organiza em árvore (**DIT**) e caminhos (**DN**). AD é a base de dados; LDAP lê-a. **LDAPS = porto 636**.
-  - **OAuth** — framework de **autorização** (não autenticação); define que recursos o utilizador tem.
+  - **OAuth** — TAMBEM DA PRA CLOUD. framework de **autorização** (não autenticação); define que recursos o utilizador tem.
   - **SAML (Security Assertion Markup Language)** — standard **XML** para trocar **autenticação**.
   - **OpenID Connect** — autenticação sobre OAuth (login com Google/Microsoft na cloud).
 - **Attestation** — confirmar/validar a posse de uma identidade.
