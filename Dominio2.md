@@ -49,7 +49,7 @@ Muitos vetores devem-se a **misconfiguration** e falta de literacia digital: dad
 
 **Application:**
 - **Memory injection** — injetar código na memória de outro processo. **DLL Injection** é o método clássico (substitui/aponta o DLL para um infetado). *Defesa:* usar **caminhos totalmente qualificados** para DLLs.
-- **Buffer overflow** — falta de validação do tamanho: enviar mais dados do que a variável comporta. Pode causar **crash (DoS)** mas também **execução de código/privilege escalation** (não é só DoS). *(Integer overflow: valor de 64 bits numa variável de 4 bytes.)*
+- **Buffer overflow** — para arrays, integer overflow para numero de bytes em numeros. falta de validação do tamanho: enviar mais dados do que a variável comporta. Pode causar **crash (DoS)** mas também **execução de código/privilege escalation** (não é só DoS). *(Integer overflow: valor de 64 bits numa variável de 4 bytes.)*
 - **Race conditions** — dois eventos em simultâneo que o programa não devia permitir. **TOC (Time-of-Check)** → **TOU (Time-of-Use)**: verifica e usa um valor desatualizado (ex.: saldo bancário). **TOE (Target of Evaluation)** é o alvo avaliado. *Defesa:* **file locking** (bloquear o recurso até terminar).
 - **Malicious update** — atualização infetada; confirmar **digital signature** compatível com a do fabricante e fazer backups.
 
