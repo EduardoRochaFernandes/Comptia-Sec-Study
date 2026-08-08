@@ -51,6 +51,7 @@
 - **CVSS (Common Vulnerability Scoring System)** — score **0–10**; três grupos de métricas: **Base**, **Temporal**, **Environmental**. O **impact metric** (no Base) é composto por **Confidentiality, Integrity, Availability**. *(3.0 = severidade **baixa**.)*
 - **CVE (Common Vulnerabilities and Exposures)** — o **identificador/lista** da vulnerabilidade (é um **vulnerability feed**). *CVSS pontua; CVE identifica.*
 - **Exposure factor (EF)** — **% do valor do ativo** perdido no evento. **Environmental variables**, **industry/organizational impact**, **Risk tolerance** (tempo que a empresa aceita conviver com a falha). Para priorizar com a realidade da organização → **CVSS com environmental metrics**.
+- **Vulnerability Classification** — agrupar por características comuns (tipo de ataque, tipo de falha, stack afetado) para organizar a remediação.
 
 ### Response & remediation
 - **Patching**, **Segmentation**, **Compensating controls** (ex.: mover para VLAN protegida + jump server quando não há patch), **Insurance** (transferência de risco — **NÃO** é controlo técnico), **Exceptions** (exceção à regra) e **Exemptions** (dispensa oficial — ex.: servidor que crasha ao ser scaneado → documentar exemption + compensating controls).
