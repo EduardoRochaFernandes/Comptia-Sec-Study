@@ -86,6 +86,8 @@ Ter o máximo de **security zones** para segmentar dispositivos/redes com nívei
 - **Port security** — filtra por **MAC address** (que máquinas podem ligar-se a um porto Ethernet).
 - **802.1X** (Port-Based NAC) — antes de autenticar, o porto **só deixa passar tráfego EAP**. Fluxo: **Supplicant** tenta aceder -> **EAP** pede a identidade e envia ao **Auth Server** -> pede username/password -> supplicant fornece -> Auth Server verifica. Usado no **WPA3-Enterprise**; pode atribuir **VLAN por role**.
 - **NAC** - Serve para verificar se um dispositivo está legível ou não de entrar numa rede privada
+  - Pode ser **agent-based** (software que consegue reportar com alto detalhe versoes, patches, configurações do dispositivo) ou **agentless** que não tem software e é menos detalhado.
+  - Pode ser **preadmission** ou **postadmission** se a análise for feita antes ou depois (respetivamente) do dispositivo entrar na rede
 - **EAP** (Extensible Authentication Protocol) — linguagem entre supplicant e Auth Server: **EAP-TLS** (certificado nos **dois** lados), **PEAP** (certificado só do lado do **servidor**), **LEAP / EAP-MD5** (sem verificação forte).
 
 ### Firewall types
