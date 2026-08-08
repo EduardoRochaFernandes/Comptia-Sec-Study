@@ -96,7 +96,7 @@ Complementos: **Adaptive identity** (IP, tipo de ligação, dispositivo, login r
 - **Honeypot** — sistema isolado (físico/virtual) que simula um ambiente real, mas com ficheiros/objetos falsos.
 - **Honeyfile** — ficheiro falso (isco).
 - **Honeytoken** — dado rastreado que, se copiado/usado, revela de imediato o intruso (funciona bem com **DLP** para detetar exfiltração).
-- **Honeyfarm** — coleção de vários honeypots numa rede, para capturar informação de ameaças em maior escala.
+- **Honeyfarm** — local físico onde estão centralizadas todas as honeypots.
 
 ## 1.3 — Change Management
 Uma mudança não controlada pode afetar sistemas inteiros. Usa-se um processo com **SOP (Standard Operating Procedure)** — garante um processo consistente para cada mudança. Só se faz o que está documentado, mesmo que demore mais.
