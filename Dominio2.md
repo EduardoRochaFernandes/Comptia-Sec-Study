@@ -164,7 +164,7 @@ Mitigação reduz o **impacto**; hardening reduz a **superfície de ataque**.
 - **UTM (Unified Threat Management)** — junta várias destas funções num só dispositivo.
 
 **Termos de análise:** **IoC (Indicators of Compromise)**, **OSINT**, **predictive analysis** (ML sobre dados históricos), **threat maps**, **posture assessment** (estado dos dispositivos).
-1.	EDR, analisa tráfego de rede de um único endpoint usa machine learning e predictive analysis para detetar tipos de ataques que o sistema ainda não enfrentou. Coloca o sistema em quarentena e retorna-o para o backup mais recente. XDR vê a rede toda e múltiplos endpoints e suas redes
+1.	EDR, NAO PREVINE CONTRA MALWARE APENAS BEHAVIOUYR  PREDICTIVE ANALYSIS. Analisa tráfego de rede de um único endpoint usa machine learning e predictive analysis para detetar tipos de ataques que o sistema ainda não enfrentou. Coloca o sistema em quarentena e retorna-o para o backup mais recente. XDR vê a rede toda e múltiplos endpoints e suas redes
 2.	HIPS e HIDS, o primeiro analisa alterações nas configurações de OS, aplicações e registry keys. O segundo não ativamente para, apenas deteta e alerta. Detetam via anomalias e signatures (padroes conhecidos) e heuristic (caracteres de um código ou ficheiro). Ambos funcionam a nível de tráfego de rede de um único dispositivo (daí o “H” de host).
 3.	Host-Based Firewall, camada de segurança na camada 4 de TCP/IP que analisa todo o tráfego na rede baseado em portos, protocolos e IPs
 4.	NGFW opera na camada 7 e analisa o conteúdo mas de acordo com o contexto da aplicação inteira
