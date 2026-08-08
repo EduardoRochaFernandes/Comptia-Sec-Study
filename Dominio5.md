@@ -42,6 +42,7 @@ Hierarquia dos documentos (framework típico = **Policies, Standards, Procedures
 **SOAR (Security Orchestration, Automation and Response)** — centraliza várias apps de segurança num só fluxo.
 
 ## 5.2 — Risk Management
+Processo periódico para análise do sistema de modo a descobrir riscos e definir KRIs.
 
 ### Risk assessment (tipos)
 - **Ad hoc** — perante um novo risco/necessidade rápida com expertise interna (ex.: avaliar aquisição de subsidiária depressa).
@@ -63,6 +64,7 @@ Hierarquia dos documentos (framework típico = **Policies, Standards, Procedures
 ### Risk register & governance
 - **Risk register** — documento que enumera e classifica os riscos.
 - **KRI (Key Risk Indicator)** — deve ser **acionável, mensurável, relevante** (*"inexpensive" não é característica-chave*).
+- **KPI (Key Performance Indicator)** - número que mostra se estamos a alcança um objetivo definido
 - **Risk owner** — responsável por gerir um risco específico.
 - **Risk threshold** — nível de impacto/probabilidade a partir do qual se aceita ou se trata o risco.
 - **Risk tolerance** — variação tolerada face ao plano. **Risk appetite** — quanta incerteza a empresa aceita para atingir objetivos: **Expansionary** (aceita muito, para expandir), **Conservative** (governo/regulado), **Neutral** (equilíbrio).
