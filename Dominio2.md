@@ -171,3 +171,4 @@ Mitigação reduz o **impacto**; hardening reduz a **superfície de ataque**.
 5.	WAF (Web Application Firewall) funciona como um IPS em aplicações web contra XSS e SQLi
 6.	IPS e IDS, ambos têm como objetivo filtrar e detetar alertas na rede inteira. No entanto, o primeiro deteta e bloqueia a ameaça, enquanto o segundo apenas a deteta e alerta o sistema. Nota: um IPS pode ter dois tipos de monitorização: ativa/inline, onde para se detetar anomalia, e passiva/out of band, onde cria uma cópia do tráfego, analisa-o, e alerta o sistema (tal como um IDS) se vir uma anomalia.
 ures
+IPS E IDS VS FIREWALL: A FIREWALL NAO ANALISA A NIVEL DE APLICACAO AO CONTRARIO DE IPS
