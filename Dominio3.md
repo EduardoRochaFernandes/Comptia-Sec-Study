@@ -23,7 +23,11 @@ Modelo muito usado pela capacidade de armazenamento e facilidade de acesso. Gran
 
 ### Network Infrastructure
 - **Air gap (isolamento físico)** — isolamento absoluto, sem qualquer ligação (ex.: +1 cliente = +1 switch). Máxima segurança para ICS/SCADA e backups (evita malware).
-- **SDN (Software-Defined Networking)** — centraliza o controlo para escalar. Três planos: **Management Plane** (admin configura políticas), **Control Plane** (o "cérebro", decide o encaminhamento) e **Data Plane** (infraestrutura física que reencaminha). *O mais crítico a proteger é o **SDN controller**.*
+- **SDN (Software-Defined Networking)** — centraliza o controlo para escalar. Três planos:
+    - **Management Plane** (admin configura políticas),
+    - **Control Plane** (o "cérebro", decide o encaminhamento)
+    - **Data Plane** (infraestrutura física que reencaminha).
+    - *O mais crítico a proteger é o **SDN controller**.*
 - **VLANs (isolamento lógico)** — segmenta um único switch em várias redes virtuais isoladas; escala muito melhor que air gap. VMs não comunicam salvo se permitido por router/firewall.
 - **Centralized vs. decentralized** — descentralizado dá **maior resiliência** mas **maior complexidade** (ex.: escritórios regionais + vários SaaS = modelo decentralized).
 
@@ -36,7 +40,19 @@ Modelo muito usado pela capacidade de armazenamento e facilidade de acesso. Gran
 - **Embedded systems** — hardware + software num só, com um **propósito específico** (semáforos, equipamento médico). Limitações: **compute** (CPU/memória), sem bulk storage, **inability to patch**, longa vida útil, não configuráveis pelo utilizador.
 - **High availability (HA)** — manter sistemas disponíveis apesar de falhas: **redundante** (backup pode precisar de config manual), **HA** (backup assume de imediato) ou **Active-Active HA** (ambos ativos, mais caro). *1.º passo num design HA: **identificar single points of failure**.*
 
-**Considerations** de uma infraestrutura: **Availability** (% de tempo sem falhas), **Resilience**, **Responsiveness**, **Scalability** (**Vertical** = mais recursos; **Horizontal** = mais máquinas), **Elasticity** (provisiona/desprovisiona automaticamente conforme a carga — evita over/underprovisioning), **Cost**, **Ease of deployment**, **Risk transference** (ex.: seguro / suporte de terceiros), **Ease of recovery**, **Patch availability / Inability to patch**, **Power**, **Compute**.
+**Considerations** de uma infraestrutura: 
+  - **Availability** (% de tempo sem falhas),
+  - **Resilience**,
+  - **Responsiveness**,
+  - **Scalability** (**Vertical** = mais recursos; **Horizontal** = mais máquinas),
+  - **Elasticity** (provisiona/desprovisiona automaticamente conforme a carga — evita over/underprovisioning),
+  - **Cost**,
+  - **Ease of deployment**,
+  - **Risk transference** (ex.: seguro / suporte de terceiros),
+  - **Ease of recovery**,
+  - **Patch availability / Inability to patch**,
+  - **Power**,
+  - **Compute**.
 
 ## 3.2 — Secure Enterprise Infrastructure
 
@@ -51,7 +67,13 @@ Ter o máximo de **security zones** para segmentar dispositivos/redes com nívei
 - **Fail-closed** — tudo para quando algo falha (prioriza segurança; escolhe-se se preferires downtime a falta de monitorização).
 
 ### Network appliances
-- **Load balancer** — distribui tráfego; se um servidor falha, redistribui. Tem **um único VIP (Virtual IP)** (o IP que os clientes veem). Algoritmos: **Round-robin** (um a um), **Weighted response time** (pelo tempo de resposta), **Least connection** (menos ligações ativas), **(Weighted) least connection** (com rating do servidor), **Source IP hashing** (usa o IP do cliente), **Session persistence / Sticky** (mesmo cliente -> mesmo servidor). *Não cobre **risk transference**.*
+- **Load balancer** — distribui tráfego; se um servidor falha, redistribui. Tem **um único VIP (Virtual IP)** (o IP que os clientes veem). Algoritmos:
+  - **Round-robin** (um a um),
+  - **Weighted response time** (pelo tempo de resposta),
+  - **Least connection** (menos ligações ativas),
+  - **(Weighted) least connection** (com rating do servidor),
+  - **Source IP hashing** (usa o IP do cliente),
+  - **Session persistence / Sticky** (mesmo cliente -> mesmo servidor). *Não cobre **risk transference**.*
 - **Clustering** — vários servidores respondem **como se fossem o mesmo dispositivo** (distinto de load balancing).
 - **IPS/IDS monitoring:** **Inline / Active NIPS** (filtra, deteta e **bloqueia** antes de chegar), **Passive / Out-of-band** (recebe cópia do tráfego, deteta e alerta, como um IDS). Um **IDS** é sempre **passivo**. Deteção por **signatures**, **heuristics** e **anomalies** (esta última apanha comportamentos de APT após baseline).
 - **Network / Physical tap** — hardware inserido entre switch e router que copia o sinal; se falhar, a ligação continua.
