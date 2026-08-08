@@ -16,7 +16,11 @@
   - **BYOD (Bring Your Own Device)** — o utilizador traz o seu; **menos controlo / mais escolha** para o utilizador.
   - **COPE (Corporate-Owned, Personally Enabled)** — a empresa compra (modelo específico), permite uso pessoal razoável.
   - **CYOD (Choose Your Own Device)** — escolher de uma **lista aprovada**; a empresa é dona e gere centralmente.
-- **MDM (Mobile Device Management)** — gere apps/dados; features: **remote wipe**, **geofencing** (impedir uso fora do campus), **content/application management**, **containerization / storage segmentation** (isolar dados corporativos), **FDE** (full-disk encryption).
+- **MDM (Mobile Device Management)** — gere apps/dados; features: **remote wipe**, **geofencing** (impedir uso fora do campus),
+  - **Content management** — provisionar/gerir ficheiros, documentos e media nos dispositivos (folhetos, PDFs, o "standard set of marketing information" da Charlene).
+  - **Application management** — gerir apps (instalar, atualizar, remover, restringir). 
+  - **Remote wipe** — apagar dados se o dispositivo se perde/colaborador sai.
+  - **Push notifications** — enviar avisos ao utilizador.          
 
 ### Wireless security settings
 - **Open** (nenhuma) · **WPA3 Personal** — passphrase, mas usa **SAE (Simultaneous Authentication of Equals)** em vez do handshake PSK do WPA2 (é isto que o torna mais seguro). **WPA3 Enterprise** — autenticação por **auth server** via **AAA/RADIUS** + **802.1X**; cifra **AES**.
