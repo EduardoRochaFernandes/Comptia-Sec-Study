@@ -103,7 +103,7 @@ Ter o máximo de **security zones** para segmentar dispositivos/redes com nívei
     - **Transport mode** — encripta **apenas o payload** e **mantém o IP header original** visível (usado quando a política depende do porto/header). *Fornece confidentiality, authentication e integrity — não availability.*
 - **SSL/TLS VPN** — **Layer 7**; ligação remota fácil (browser-based), sem instalar cliente. Aplicar **TLS em todo o lado**. **Nunca usar SSL** (inseguro).
 - **IPSec vs TLS** — no IPSec o dispositivo fica **com o IP da empresa** (rede completa); no TLS acede-se só à app e navega-se remotamente.
-- **SD-WAN (Software-Defined WAN)** — liga os utilizadores diretamente à cloud (em vez de passar pelo datacenter); gere **MPLS, broadband, LTE** (não Wi-Fi).
+- **SD-WAN (Software-Defined WAN)** — Centraliza gestão de políticas de segurança. Liga os utilizadores diretamente à cloud (em vez de passar pelo datacenter); gere **MPLS, broadband, LTE** (não Wi-Fi).
 - **SASE (Secure Access Service Edge)** — **SD-WAN na cloud** + segurança extensiva (**zero trust**, **CASB**, firewall) a substituir VPNs tradicionais.
 
 ## 3.3 — Data Protection
