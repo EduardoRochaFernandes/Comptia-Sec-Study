@@ -164,52 +164,10 @@ Mitigação reduz o **impacto**; hardening reduz a **superfície de ataque**.
 - **UTM (Unified Threat Management)** — junta várias destas funções num só dispositivo.
 
 **Termos de análise:** **IoC (Indicators of Compromise)**, **OSINT**, **predictive analysis** (ML sobre dados históricos), **threat maps**, **posture assessment** (estado dos dispositivos).
-
-## Distratores comuns (revisão rápida)
-- **Shadow IT** = TI **não autorizada**, não "pouca literacia".
-- **Jailbreak = iPhone/iOS**; **Root = Android** (não trocar!).
-- **Sofisticação:** Nation-state > Organized crime > Hacktivist > Shadow IT.
-- **Virus** precisa de ação humana; **Worm** não.
-- **DoS** é deliberado; **DDoS** usa botnet; **amplified/reflected** falsifica o IP da vítima.
-- **Buffer overflow** pode dar execução de código, não é só DoS.
-- **Bluejacking** (enviar) vs **Bluesnarfing** (roubar).
-- **Collision** = mesmo hash; **Birthday** = método para a encontrar.
-- **Offline brute force** ataca **SAM** (Windows) e **/etc/shadow** (Linux).
-- **HIPS** bloqueia, **HIDS** só deteta; **IPS** bloqueia, **IDS** só deteta.
-- **Vertical** (subir privilégios) vs **Horizontal** (mesmo nível, outro user).
-- **Resource reuse** previne-se **encriptando volumes na criação**.
-- **Zero-day** = fabricante ainda não sabe.
-
-## Acrónimos (Domínio 2)
-- **APT** — Advanced Persistent Threat
-- **RAT** — Remote Access Trojan
-- **C2** — Command and Control
-- **IoC** — Indicator of Compromise
-- **OSINT** — Open-Source Intelligence
-- **DoS / DDoS** — (Distributed) Denial-of-Service
-- **DNS** — Domain Name System
-- **SQLi** — SQL Injection
-- **XSS** — Cross-Site Scripting
-- **CSRF / XSRF** — Cross-Site Request Forgery
-- **SSRF** — Server-Side Request Forgery
-- **RFID** — Radio Frequency Identification
-- **MSP** — Managed Service Provider
-- **BEC** — Business Email Compromise
-- **EDR / XDR** — (Extended) Endpoint Detection and Response
-- **HIDS / HIPS** — Host-based Intrusion Detection/Prevention System
-- **IDS / IPS** — Intrusion Detection/Prevention System
-- **NGFW** — Next-Generation Firewall
-- **WAF** — Web Application Firewall
-- **UTM** — Unified Threat Management
-- **ACL** — Access Control List
-- **MDM** — Mobile Device Management
-- **VM** — Virtual Machine
-- **TOC / TOU / TOE** — Time-of-Check / Time-of-Use / Target-of-Evaluation
-- **NTLM** — NT LAN Manager
-- **SIEM** — Security Information and Event Management
-- **WPA2 / WPA3** — Wi-Fi Protected Access
-- **SAM** — Security Account Manager (Windows)
-- **IRC** — Internet Relay Chat
-- **IM / SMS** — Instant Messaging / Short Message Service
-- **EOL / EOSL** — End-of-Life / End-of-Service-Life
-- **CVE** — Common Vulnerabilities and Exposures
+1.	EDR, analisa tráfego de rede de um único endpoint usa machine learning e predictive analysis para detetar tipos de ataques que o sistema ainda não enfrentou. Coloca o sistema em quarentena e retorna-o para o backup mais recente. XDR vê a rede toda e múltiplos endpoints e suas redes
+2.	HIPS e HIDS, o primeiro analisa alterações nas configurações de OS, aplicações e registry keys. O segundo não ativamente para, apenas deteta e alerta. Detetam via anomalias e signatures (padroes conhecidos) e heuristic (caracteres de um código ou ficheiro). Ambos funcionam a nível de tráfego de rede de um único dispositivo (daí o “H” de host).
+3.	Host-Based Firewall, camada de segurança na camada 4 de TCP/IP que analisa todo o tráfego na rede baseado em portos, protocolos e IPs
+4.	NGFW opera na camada 7 e analisa o conteúdo mas de acordo com o contexto da aplicação inteira
+5.	WAF (Web Application Firewall) funciona como um IPS em aplicações web contra XSS e SQLi
+6.	IPS e IDS, ambos têm como objetivo filtrar e detetar alertas na rede inteira. No entanto, o primeiro deteta e bloqueia a ameaça, enquanto o segundo apenas a deteta e alerta o sistema. Nota: um IPS pode ter dois tipos de monitorização: ativa/inline, onde para se detetar anomalia, e passiva/out of band, onde cria uma cópia do tráfego, analisa-o, e alerta o sistema (tal como um IDS) se vir uma anomalia.
+ures
